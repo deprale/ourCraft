@@ -143,6 +143,8 @@ bool isGrassMesh(BlockType type);
 
 bool isCollidable(BlockType type);
 
+bool isAnimatedBlock(BlockType type);
+
 struct Block
 {
 	BlockType type;
@@ -158,7 +160,7 @@ struct Block
 	//rename is animated leaves (why?)
 	bool isAnimatedBlock()
 	{
-		return (blockProperties[type] & Mask::IS_ANIMATED_MASK) != 0;
+		return ::isAnimatedBlock(type);
 	}
 
 	bool isTransparentGeometry()
