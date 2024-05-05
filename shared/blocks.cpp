@@ -11,7 +11,7 @@ bool isBlockMesh(BlockType type)
     return !isCrossMesh(type); // dirty hack for now?
 }
 
-bool isTransparentGeometry(BlockType type) 
+bool isTransparentGeometry(BlockType type)
 {
     return (blockProperties[type] & Mask::IS_TRANSPARENT_MASK) != 0;
 }
